@@ -1,0 +1,86 @@
+.welcome-page-container {
+  display: flex;
+  flex-direction: row; 
+  width: 100vw;
+  height: calc(100vh - 70px); 
+  margin-top: 70px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.carro-fundo {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.carro-fundo img {
+  width: 100%;
+  height: auto;
+  max-width: 500px; 
+  object-fit: contain;
+}
+.cartao-boas-vindas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.logo2 {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.titulo-boas-vindas {
+  color: #002c5b;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.mensagem-usuario {
+  color: #555555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+@media (max-width: 992px) {
+  .welcome-page-container {
+    flex-direction: column;
+    height: auto;
+    min-height: calc(100vh - 70px);
+    overflow-y: auto;
+    padding-top: 20px; 
+  }
+
+  .carro-fundo {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .carro-fundo img {
+    max-width: 320px;
+  }
+
+  .cartao-boas-vindas {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .titulo-boas-vindas {
+    font-size: 1.6rem;
+  }
+}
