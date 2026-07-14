@@ -10,7 +10,7 @@ export class ApiService {
 private apiUrl = 'http://localhost:3001';
   constructor(private http: HttpClient) { }
   getDados(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/`);
+    return this.http.get(`${this.apiUrl}/vehicles`);
   }
   login(nome: string, senha: string): Observable<Usuario> {
     return this.http.post<Usuario>(
@@ -18,11 +18,9 @@ private apiUrl = 'http://localhost:3001';
       {nome, senha}
     )
     .pipe(
-      tap(
-        (user) => {
+      tap((user) => {
           sessionStorage.setItem("user", user.nome);
-        }
-      )
+        })
     )
   }
 }
